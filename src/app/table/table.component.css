@@ -1,0 +1,27 @@
+table {
+  width: 55%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+th {
+  text-align: left;
+  height: 30px;
+  padding: 5px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 3px solid gainsboro;
+}
+td {
+  height: 30px;
+  padding: 5px;
+  border-top: 1px solid gainsboro;
+}
+button {
+  color: red;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+.selectFavorite{
+color: black;
+}

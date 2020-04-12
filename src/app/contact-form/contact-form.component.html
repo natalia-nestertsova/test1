@@ -1,0 +1,19 @@
+  <form [formGroup]="contactForm" (ngSubmit)="addContact()">
+  <div class='block'>
+    <label>{{lastName}}</label>
+    <input type="text" class="form-control" formControlName="lastName">
+  </div>
+  <div class='block'>
+    <label>{{firstName}}</label>
+    <input type="text" class="form-control" formControlName="firstName">
+  </div>
+  <div class='block'>
+    <label>{{patronymic}}</label>
+    <input type="text" class="form-control" formControlName="patronymic">
+  </div>
+  <div class='block'>
+    <label>{{phone}}</label>
+    <input type="text" class="form-control" formControlName="phone">
+  </div>
+  <button type="submit" (click)="addContact()">+</button>
+</form>

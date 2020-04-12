@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Имя</th>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Отчество</th>
+      <th scope="col">Номер</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts; let i = index">
+      <td scope="row">
+        <button class="selectFavorite" type="submit" (click)="addToFavorites(i)">
+          <img src="img/icons8-star-50.png" width="15px" *ngIf="!contact.favorite"
+           alt="star">
+          <img src="img/icons8-star-48.png" width="20px" *ngIf="contact.favorite" alt="star">
+        </button>
+      </td>
+      <td>{{contact.firstName}} </td>
+      <td>{{contact.lastName}}</td>
+      <td>{{contact.patronymic}}</td>
+      <td>{{contact.phone}}</td>
+      <td><button class="deleteContact" type="reset" (click)="deleteContact(i)">X</button></td>
+    </tr>
+  </tbody>
+</table>
