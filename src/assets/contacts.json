@@ -1,0 +1,26 @@
+[
+    {
+      "id": 0,
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "patronymic": "Иванович",
+      "phone": "+7696666667",
+      "favorite": false
+    },
+    {
+      "id": 1,
+      "firstName": "Иван1",
+      "lastName": "Иванов1",
+      "patronymic": "Иванович1",
+      "phone": "+7696666667",
+      "favorite": false
+    },
+    {
+      "id": 2,
+      "firstName": "Иван2",
+      "lastName": "Иванов2",
+      "patronymic": "Иванович2",
+      "phone": "+7696666667",
+      "favorite": false
+    }
+  ]

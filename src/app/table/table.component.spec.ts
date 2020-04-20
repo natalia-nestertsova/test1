@@ -42,11 +42,11 @@ describe('TableComponent', () => {
     del.click();
     expect(component.deleteContact).toHaveBeenCalled();
   });
-  it('moveToUp', () => {
+  it('moveContact', () => {
     fixture.detectChanges();
 
-    spyOn(component, 'moveToUp');
-    component.moveToUp(1);
-    expect(component.moveToUp).toHaveBeenCalled();
+    spyOn(component, 'moveContact');
+    component.moveContact(1);
+    expect(component.moveContact).toHaveBeenCalled();
   });
 });

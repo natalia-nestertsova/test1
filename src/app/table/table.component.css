@@ -1,5 +1,5 @@
 table {
-  width: 55%;
+  width: 60%;
   border-collapse: collapse;
   margin-top: 40px;
 }
@@ -9,6 +9,9 @@ th {
   padding: 5px;
   border-top: 1px solid gainsboro;
   border-bottom: 3px solid gainsboro;
+}
+.first{
+  min-width: 10px;
 }
 td {
   height: 30px;
@@ -21,7 +24,13 @@ button {
   background: none;
   border: none;
 }
-
-.selectFavorite{
-color: black;
+button:active,
+button:focus {
+  outline: none;
+}
+.selectFavorite {
+  color: black;
+}
+img {
+  width: 20px;
 }

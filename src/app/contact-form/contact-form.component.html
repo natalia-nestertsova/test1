@@ -1,18 +1,18 @@
   <form [formGroup]="contactForm" (ngSubmit)="addContact()">
   <div class='block'>
-    <label>{{lastName}}</label>
+    <label>{{fields.lastName}}</label>
     <input type="text" class="form-control" formControlName="lastName">
   </div>
   <div class='block'>
-    <label>{{firstName}}</label>
+    <label>{{fields.firstName}}</label>
     <input type="text" class="form-control" formControlName="firstName">
   </div>
   <div class='block'>
-    <label>{{patronymic}}</label>
+    <label>{{fields.patronymic}}</label>
     <input type="text" class="form-control" formControlName="patronymic">
   </div>
   <div class='block'>
-    <label>{{phone}}</label>
+    <label>{{fields.phone}}</label>
     <input type="text" class="form-control" formControlName="phone">
   </div>
   <button type="submit" (click)="addContact()">+</button>
