@@ -1,3 +1,4 @@
+<app-contact-form (addNewContact)="loadContacts()"></app-contact-form>
 <table>
   <thead>
     <tr>
@@ -10,8 +11,8 @@
     </tr>
   </thead>
   <tbody>
-    <!-- <tr *ngFor="let contact of contacts; let i = index"> -->
-    <tr *ngFor="let contact of (contacts | async)">
+    <tr *ngFor="let contact of contacts; let i = index">
+    <!-- <tr *ngFor="let contact of (contacts | async)"> -->
     <!-- <tr *ngFor="let contact of (subscribe | async); let i = index"> -->
       <td scope="row">
         <button class="selectFavorite" type="submit" (click)="addToFavorites(contact)">
@@ -29,4 +30,3 @@
     </tr>
   </tbody>
 </table>
-{{contacts | json}}
