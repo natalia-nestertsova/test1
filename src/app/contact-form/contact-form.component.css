@@ -1,5 +1,5 @@
 form {
-  width: 100%;
+  width: 60%;
 }
 .block {
   display: inline-block;
@@ -29,6 +29,3 @@ input.ng-touched.ng-invalid {
   border: solid red 2px;
   box-sizing: border-box;
 }
-/* input.ng-touched.ng-valid {
-  border: solid green 2px;
-} */

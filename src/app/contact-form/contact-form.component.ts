@@ -12,13 +12,7 @@ import { Fields } from '../definition/fields';
 
 export class ContactFormComponent {
   fields: typeof Fields = Fields;
-  PHONE_MASK = new RegExp('^[\+]?(7)"("/[0-9]/{3}")"[0-9 ]{3}[0-9 ]{2}[0-9]{2}');
-  // PHONE_MASK = new RegExp('/^(([+]{0,1}\d{2})|\d?)[\s-]?[0-9]{2}[\s-]?[0-9]{3}[\s-]?[0-9]{4}$/gm');
-  // PHONE_MASK = new RegExp('^[+]*7*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]');
-  // PHONE_MASK = new RegExp('^[\+]?(7)"("/[0-9]/{3}")"-[0-9]{3}-[0-9]{4}');
-  PHONE_NAMBER = new RegExp('^[\+]?(7)[0-9]{10}');
-  // newId = 3;
-
+  PHONE_MASK = new RegExp(/^[+]*7[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g);
   contactForm = this.fb.group({
     firstName: [''],
     lastName:  ['', Validators.required],
@@ -26,10 +20,7 @@ export class ContactFormComponent {
     phone: ['+7',
      [
         Validators.required,
-        // Validators.pattern(this.PHONE_MASK),
-        // Validators.pattern( this.PHONE_NAMBER || this.PHONE_MASK ),
-        // Validators.pattern( this.PHONE_NAMBER ),
-        Validators.pattern(/^\(\d{3}\)\s\d{3}-\d{4}$/),
+        Validators.pattern( this.PHONE_MASK ),
         Validators.minLength(11)
       ]
     ],
@@ -48,6 +39,6 @@ export class ContactFormComponent {
       this.contactsData.addContact(this.contactForm.value).subscribe();
       this.contactForm.reset();
     }
-    this.add();
+      this.add();
   }
 }

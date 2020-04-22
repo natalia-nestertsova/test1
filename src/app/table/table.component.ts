@@ -3,13 +3,13 @@ import { DataService } from '../dataService/data-service.service';
 import { Fields } from '../definition/fields';
 import { Contact } from '../interface/contact';
 
-
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class TableComponent implements OnInit {
   contacts;
   fields: typeof Fields = Fields;
@@ -25,13 +25,15 @@ export class TableComponent implements OnInit {
       this.contacts = data;
       this.cd.markForCheck();
     });
-
+    this.cd.markForCheck();
   }
+
   deleteContact(id: string) {
     this.contactsData.deleteContact(id).subscribe(() => {
       this.loadContacts();
     });
   }
+
   addToFavorites(contact: Contact) {
     contact.favorite = !contact.favorite;
     this.contactsData.addFavorite(contact).subscribe();
